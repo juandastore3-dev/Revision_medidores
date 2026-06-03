@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #35116e;
+    height: 100%;
+    width: 250px;
+}
+
+h1,h2,h3{
+    color: #fff;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.contenido_principal,label, input{
+  margin: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  color: #808080;
+}
+
+hr{
+    color: rgb(255, 0, 0);
+}
+
+.menu, label, input{
+ margin: 10px;
+ display: flex;
+ align-items: center;
+}
+
+menu :hover{
+    background-color: #1f0844;
+}

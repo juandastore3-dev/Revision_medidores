@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MEDIDOR</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+
+            <h1>EMPRESAS PUBLICAS DE CALARCA E.S.P</h1>
+     
+            <div class="contenido_principal">
+             <label for="revision">Revisión crítica nro:</label>
+            <input type="number" placeholder="revision">
+
+             <label for="cod_suscript">cod suscriptores:</label>
+            <input type="number" placeholder="cod_suscript">
+
+             <label for="Nombre">Ingrese nombres completos</label>
+            <input type="text" id="nombre" placeholder="nombres">
+
+             <label for="medidor">Nro medidor</label>
+            <input type="number" placeholder="medidor">
+
+             <label for="causa">Causa no lect:</label>
+            <input type="text" placeholder="causa">
+
+             <label for="observacion">observación lect:</label>
+            <input type="text" placeholder="observacion">
+
+             <label for="ciclo">ciclo:</label>
+            <input type="number" placeholder="ciclo">
+
+            <label for="etapa">Etapa:</label>
+            <input type="number" placeholder="etapa">
+
+            <label for="ruta">ruta</label>
+            <input type="number" placeholder="ruta">
+
+            <label for="lectura_Actual">Lectura actual</label>
+            <input type="number" placeholder="lectura_Actual">
+
+            <label for="año">Periodo de factura del año:</label>
+            <input type="date" placeholder="año">
+
+            <label for="mes">mes:</label>
+            <input type="month" placeholder="mes">
+
+            <label for="Direccion">Dirección:</label>
+            <input type="text" placeholder="Direccion">
+
+            <label for="consumo">Consumo</label>
+            <input type="number" placeholder="consumo">
+
+            <label for="promedio">Promedio</label>
+            <input type="numero" placeholder="promedio">
+
+            <label for="Alto_cons">Alto cons</label>
+            <input type="text" placeholder="Alto_cons">
+
+            <label for="Bajo_cons">Bajo cons</label>
+            <input type="text" placeholder="Bajo_cons">
+          </div>
+        </div>
+
+        <hr>
+        <div class="menu">
+
+           <label for="uso">Uso</label>
+           <input type="text" placeholder="uso">
+
+           <label for="habitantes">Nro habitantes</label>
+           <input type="number" placeholder="habitantes">
+
+           <label for="claseUso">Clase de uso encontrado:Resid:</label>
+           <input type="text" placeholder="claseUso">
+
+           <label for="TiempoHabitantes">Tiempo habitante</label>
+           <input type="text" placeholder="TiempoHabitantes">
+
+           <label for="comercio">Comerc:</label>
+           <input type="text" placeholder="comercio">
+
+           <label for="piso">Nro piso</label>
+           <input type="number" placeholder="piso">
+
+           <label for="indust">Indust:</label>
+           <input type="text" placeholder="indust">
+
+           <label for="oficina">ofic:</label>
+           <input type="text" placeholder="oficina">
+
+           <label for="espec">Espec:</label>
+           <input type="text" placeholder="espec">
+
+           <label for="provis">Provis:</label>
+           <input type="text" placeholder="provis">
+
+           <label for="servicio">Tiene servicio directo</label>
+           <input type="text" placeholder="si">
+            <input type="text" placeholder="no">
+
+        </div>
+    </header>
+
+    <main>
+        <div class="códigoCritica">
+            <h2>Seleccione un código de crítica</h2>
+
+            <label>
+                <input type="checkbox" name="revición" value="revición">
+                71- NO DEJA ENTRAR A REVISAR
+            </label>
+            <label>
+                <input type="checkbox" name="predioDesocupado" value="predio">
+                72- PREDIO DESOCUPADO. NO SE PUDO REVISAR
+            </label>
+            <label>
+                <input type="checkbox" name="malaLectura" value="lectura">
+                73- SE PRESENTO MALA LECTURA
+            </label>
+            <label>
+                <input type="checkbox" name="revisionGeofono" value="revision">
+                74- NO SEPERCIBE DAÑO. REVISAR CON GEOFONO
+            </label>
+            <label>
+                <input type="checkbox" name="fugaNoDetectada" value="fuga">
+                75- FUGA NO VISIBLE DETECTADA CON GEOFONO
+            </label>
+            <label>
+                <input type="checkbox" name="dañoReparado" value="reparado">
+                76- DAÑO VISIBLE YA REPARADO
+            </label>
+            <label>
+                <input type="checkbox" name="dañoNoReparado" value="daño">
+                77- NO HAN REPARADO EL DAÑO
+            </label>
+            <label>
+                <input type="checkbox" name="predioOcupado" value="predio">
+                78-PREDIO RECIEN OCUPADO 
+            </label>
+            <label>
+                <input type="checkbox" name="fugaTanque" value="fuga">
+                79- FUGA VISIBLE EN TANQUE SANIT POR AGUA STOP
+            </label>
+            <label>
+                <input type="checkbox" name="dañoLLaves" value="llaves">
+                80- SE PRESENTA DAÑO EN LLAVES TERMINALES
+            </label>
+            <label>
+                <input type="checkbox" name="dañoTuberias" value="tuberias">
+                81- DAÑO VISIBLE EN TUBERIAS
+            </label>
+            <label>
+                <input type="checkbox" name="dañoTanque" value="daño">
+                82- DAÑO EN TANQUE DE RESERVA
+            </label>
+            <label>
+                <input type="checkbox" name="orinalDañado" value="daño">
+                83- DAÑO EN EL ORINAL 
+            </label>
+            <label>
+                <input type="checkbox" name="medidorGira" value="cerrada">
+                84- EL MEDIDOR GIRA CON LLAVE DE PASO CERRADA
+            </label>
+            <label>
+                <input type="checkbox" name="predioContruccion" value="predio">
+                85- PREDIO EN CONSTRUCCION O REMODELACION
+            </label>
+            <label>
+                <input type="checkbox" name="consumoPredios" value="predios">
+                86- CONSUMO PARA VARIOS PREDIOS 
+            </label>
+            <label>
+                <input type="checkbox" name="consumoFamilias" value="familiksas">
+                87- CONSUMO PARA VARIAS FAMILIAS
+            </label>
+            <label>
+                <input type="checkbox" name="predioVehiculos" value="vehiculos">
+                88- EN EL PREDIO SE LAVAN VEHICULOS
+            </label>
+            <label>
+                <input type="checkbox" name="consumoAgua" value="consumo">
+                89- CONSUMO ACUMULADO DE AGUA
+            </label>
+            <label>
+                <input type="checkbox" name="consumo" value="consumo">
+                90- INCREMENTO DE CONSUMO POR RIESGO DE CULTIVO
+            </label>
+            <label>
+                <input type="checkbox" name="crianAnimales" value="predio">
+                91- EN EL PREDIO SE CRIAN ANIMALES
+            </label>
+            <label>
+                <input type="checkbox" name="aumentoPersonas" value="consumo">
+                92- CONSUMO POR AUMENTO DE # DE PERSONAS
+            </label>
+            <label>
+                <input type="checkbox" name="anomalia" value="anomalia">
+                93- NO SE ENCONTRO ANOMALIA
+            </label>
+            <label>
+                <input type="checkbox" name="fugaSanitario" value="fuga">
+                94- FUGA VISIBLE EN SANITARIO POR REBOSE
+            </label>
+            <label>
+                <input type="checkbox" name="predioVisita" value="visita">
+                95- PREDIO SOLO AL MOMENTO DE LA VISITA
+            </label>
+            <label>
+                <input type="checkbox" name="dañoLlave" value="llavePaso">
+                96- SE PRESENTA DAÑO EN LLAVE DE PASO
+            </label>
+            <label>
+                <input type="checkbox" name="lecturaTrocada" value="Trocado">
+                97- SE PRESENTA LECTURA TROCADA
+            </label>
+            <label>
+                <input type="checkbox" name="medidorMalEstado" value="malEstado">
+                98- MEDIDOR EN MAL ESTADO
+            </label>
+            <label>
+                <input type="checkbox" name="medidor" value="medidor">
+                99- MEDIDOR AL REVES
+            </label>
+            <label>
+                <input type="checkbox" name="medidorFuga" value="medidor">
+                100- MEDIDOR CON FUGA
+            </label>
+            <label>
+                <input type="checkbox" name="revision" value="revisionMedidor">
+                101- SE REQUIERE REVISION DEL MEDIDOR
+            </label>
+            <label>
+                <input type="checkbox" name="servicios" value="servicios">
+                102- EL SERVICIO ESTA SUSPENDIDO
+            </label>
+            <label>
+                <input type="checkbox" name="bajoConsumo" value="bajo">
+                103- CONSUMO BAJO POR DISMINUCION EN # DE PERSONAS
+            </label>
+            <label>
+                <input type="checkbox" name="lecturas" value="lecturasTrocadas">
+                104- LECTURA TROCADAS
+            </label>
+            <label>
+                <input type="checkbox" name="acueducto" value="acueducto">
+                105- TIENE OTRO ACUEDUCTO
+            </label>
+            <label>
+                <input type="checkbox" name="reconectando" value="reconeccion">
+                106- RECONECTANDO
+            </label>
+            <label>
+                <input type="checkbox" name="llaves" value="llavesInternas">
+                107- MEDIDOR GIRA CON LLAVES INTERNAS CERRADAS
+            </label>
+            <label>
+                <input type="checkbox" name="casa" value="casaSola">
+                108- CASA SOLA
+            </label>
+            <label>
+                <input type="checkbox" name="medidor" value="medidor">
+                109- MEDIDOR BAJO LLAVE
+            </label>
+        </div>
+    </main>
+
+    <section>
+        <div class="Report">
+            <label for="Lectura">Lectura al momento de la vista</label>
+            <input type="text" placeholder="Lectura">
+
+            <label for="visita">Informe de visita</label>
+            <textarea id="Visita" rows="6"></textarea>
+
+            <label for="Nombre">Nombre del usuario</label>
+            <input type="text" placeholder="nombre">
+        </div>
+
+        <div class="Firmas">
+
+        </div>
+    </section>
+    <script src="medidor.js"></script>
+</body>
+</html>
