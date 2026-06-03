@@ -100,12 +100,14 @@
            <input type="text" placeholder="provis">
 
            <label for="servicio">Tiene servicio directo</label>
-           <input type="text" placeholder="si">
-            <input type="text" placeholder="no">
+           <input type="text">
+            <input type="text">
 
         </div>
+        <hr>
     </header>
-
+     
+    <br>
     <main>
         <div class="códigoCritica">
             <h2>Seleccione un código de crítica</h2>
@@ -281,9 +283,27 @@
             <input type="text" placeholder="nombre">
         </div>
 
-        <div class="Firmas">
-
+        <div class="Firma_Usuario">
+            <label for="nombre">Ingrese nombre completo</label>
+            <input type="text" placeholder="Ingrese nombre completo">
+           <label>Firma:</label>
+           <br>
+           <canvas id="Firma_Usuario" width="400" height="50" style="border: 1px solid #000;"></canvas>
         </div>
+         
+         <div class="Firma_funcionario">
+            <label for="nombre">Ingrese nombre completo</label>
+            <input type="text" placeholder="Ingrese nombre completo">
+           <label>Firma:</label>
+           <br>
+           <canvas id="Firma_funcionario" width="400" height="50" style="border: 1px solid #000;"></canvas>
+        </div>
+
+        <button type="button" id="limpiarFirmaUsuario">
+             Limpiar firma usuario
+        </button>
+
+        <button class="btn_Enviar">Enviar</button>
     </section>
     <script src="medidor.js"></script>
 </body>

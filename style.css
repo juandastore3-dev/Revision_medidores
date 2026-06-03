@@ -1,44 +1,211 @@
+/* RESET */
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    background: #f4f7fa;
+    color: #333;
+    padding: 20px;
 }
 
-.container{
-    background-color: #35116e;
-    height: 100%;
-    width: 250px;
+/* TITULOS */
+h1{
+    text-align: center;
+    color: #005b96;
+    margin-bottom: 25px;
+    font-size: 2rem;
 }
 
-h1,h2,h3{
-    color: #fff;
-    margin: 10px;
+h2{
+    color: #005b96;
+    margin-bottom: 20px;
+   font-size: 2rem;
     text-align: center;
 }
 
-
-.contenido_principal,label, input{
-  margin: 20px;
-  flex-direction: column;
-  border-radius: 10px;
-  color: #808080;
+/* CONTENEDORES */
+.container,
+.menu,
+.codigoCritica,
+.Report,
+.Firmas{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
+/* GRID PRINCIPAL */
+.contenido_principal{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 18px;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 18px;
+}
+
+/* CAMPOS */
+.campo{
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABELS */
+label{
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* INPUTS */
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d9e0;
+    border-radius: 8px;
+    font-size: 15px;
+    
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+}
+
+/* CHECKBOX */
+.codigoCritica label{
+    display: flex;
+    margin-bottom: 12px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.codigoCritica input[type="checkbox"]{
+    width: 5px;
+    height: 5px;
+    
+}
+
+/* AREA DE CODIGOS */
+.codigoCritica{
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+/* REPORTES */
+.Report{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* LINEA */
 hr{
-    color: rgb(255, 0, 0);
+    border: none;
+    height: 2px;
+    background: #03114e;
+    margin: 25px 0;
 }
 
-.menu, label, input{
- margin: 10px;
- display: flex;
- align-items: center;
+canvas{
+    border: 1px solid #000;
+    touch-action: none;
+    background-color: white;
 }
 
-menu :hover{
-    background-color: #1f0844;
+/* BOTONES */
+button{
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    background: #005fa3;
+}
+
+/* SCROLL PERSONALIZADO */
+.codigoCritica::-webkit-scrollbar{
+    width: 8px;
+}
+
+.codigoCritica::-webkit-scrollbar-thumb{
+    background: #0077cc;
+    border-radius: 10px;
+}
+
+.codigoCritica::-webkit-scrollbar-track{
+    background: #e5edf4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    body{
+        padding: 10px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .contenido_principal,
+    .menu{
+        grid-template-columns: 1fr;
+    }
+
+    .container,
+    .menu,
+    .codigoCritica,
+    .Report,
+    .Firmas{
+        padding: 15px;
+    }
+}
+
+/* IMPRESION */
+@media print{
+
+    body{
+        background: white;
+        padding: 0;
+    }
+
+    .container,
+    .menu,
+    .codigoCritica,
+    .Report,
+    .Firmas{
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    input,
+    textarea,
+    select{
+        border: none;
+        background: transparent;
+    }
 }
