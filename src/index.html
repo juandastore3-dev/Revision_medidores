@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo_emca.png">
     <link rel="stylesheet" href="style.css">
     <title>MEDIDOR</title>
 </head>
@@ -100,8 +101,8 @@
            <input type="text" placeholder="provis">
 
            <label for="servicio">Tiene servicio directo</label>
-           <input type="text">
-            <input type="text">
+            <input type="text" placeholder="SI">
+            <input type="text" placeholder="NO">
 
         </div>
         <hr>
@@ -271,6 +272,8 @@
         </div>
     </main>
 
+    <br><br>
+
     <section>
         <div class="Report">
             <label for="Lectura">Lectura al momento de la vista</label>
@@ -282,8 +285,9 @@
             <label for="Nombre">Nombre del usuario</label>
             <input type="text" placeholder="nombre">
         </div>
-
-        <div class="Firma_Usuario">
+        
+        <div class="Reporte_firmas">
+           <div class="Firma_Usuario">
             <label for="nombre">Ingrese nombre completo</label>
             <input type="text" placeholder="Ingrese nombre completo">
            <label>Firma:</label>
@@ -298,9 +302,14 @@
            <br>
            <canvas id="Firma_funcionario" width="400" height="50" style="border: 1px solid #000;"></canvas>
         </div>
-
+            
+        </div>
         <button type="button" id="limpiarFirmaUsuario">
              Limpiar firma usuario
+        </button>
+
+        <button type="button" id="limpiarFirmaFuncionario">
+            Limpiar firma funcionario
         </button>
 
         <button class="btn_Enviar">Enviar</button>

@@ -9,7 +9,6 @@
 body{
     background: #f4f7fa;
     color: #333;
-    padding: 20px;
 }
 
 /* TITULOS */
@@ -35,8 +34,9 @@ h2{
 .Firmas{
     background: #ffffff;
     border-radius: 12px;
-    padding: 25px;
+    padding: 10px;
     margin-bottom: 20px;
+    height: 100%;
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
@@ -44,13 +44,13 @@ h2{
 .contenido_principal{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 18px;
+    gap: 20px;
 }
 
 .menu{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 18px;
+    gap: 20px;
 }
 
 /* CAMPOS */
@@ -75,7 +75,6 @@ textarea{
     border: 1px solid #d1d9e0;
     border-radius: 8px;
     font-size: 15px;
-    
 }
 
 input:focus,
@@ -95,7 +94,6 @@ textarea:focus{
 .codigoCritica input[type="checkbox"]{
     width: 5px;
     height: 5px;
-    
 }
 
 /* AREA DE CODIGOS */
@@ -104,16 +102,19 @@ textarea:focus{
     overflow-y: auto;
 }
 
-/* REPORTES */
-.Report{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+
+/* SCROLL PERSONALIZADO */
+.codigoCritica::-webkit-scrollbar{
+    width: 8px;
 }
 
-textarea{
-    resize: vertical;
-    min-height: 140px;
+.codigoCritica::-webkit-scrollbar-thumb{
+    background: #0077cc;
+    border-radius: 10px;
+}
+
+.codigoCritica::-webkit-scrollbar-track{
+    background: #e5edf4;
 }
 
 /* LINEA */
@@ -128,6 +129,26 @@ canvas{
     border: 1px solid #000;
     touch-action: none;
     background-color: white;
+    height: 50px;
+    width: 100%;
+}
+
+
+/* REPORTES */
+.Report{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.Reporte_firmas{
+    color: #fff;
+    margin: 10px;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 140px;
 }
 
 /* BOTONES */
@@ -138,26 +159,13 @@ button{
     border-radius: 8px;
     padding: 12px 25px;
     font-size: 16px;
+    margin: 5px;
     cursor: pointer;
     transition: .3s;
 }
 
 button:hover{
     background: #005fa3;
-}
-
-/* SCROLL PERSONALIZADO */
-.codigoCritica::-webkit-scrollbar{
-    width: 8px;
-}
-
-.codigoCritica::-webkit-scrollbar-thumb{
-    background: #0077cc;
-    border-radius: 10px;
-}
-
-.codigoCritica::-webkit-scrollbar-track{
-    background: #e5edf4;
 }
 
 /* RESPONSIVE */
@@ -182,6 +190,12 @@ button:hover{
     .Report,
     .Firmas{
         padding: 15px;
+    }
+
+    canvas{
+        width: 300px;
+        height: 60px;
+        border-radius: 5px;
     }
 }
 

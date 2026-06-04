@@ -80,6 +80,23 @@ document
 
 });
 
+
+document
+.getElementById("limpiarFirmaFuncionario")
+.addEventListener("click", () => {
+
+    const canvas = document.getElementById("Firma_funcionario");
+    const ctx = canvas.getContext("2d");
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+});
+
 const firmaUsuario =
 document.getElementById("Firma_Usuario")
 .toDataURL("image/png");
